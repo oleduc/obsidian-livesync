@@ -47,6 +47,7 @@
         "test:e2e:cli:p2p": "npm run test:e2e:p2p --workspace self-hosted-livesync-cli",
         "test:e2e:cli:all": "npm run test:e2e:all --workspace self-hosted-livesync-cli",
         "test:integration": "npx dotenv-cli -e .env -e .test.env -- vitest run --config vitest.config.integration.ts",
+        "test:compatibility:couchdb": "npx dotenv-cli -e .env -e .test.env -- vitest run --config vitest.config.integration.ts src/common/couchdbApiCompatibility.integration.spec.ts",
         "test:unit:coverage": "vitest run --config vitest.config.unit.ts --coverage --exclude utils/release-process.unit.spec.ts",
         "test:e2e:obsidian:install-appimage": "tsx test/e2e-obsidian/scripts/install-appimage.ts",
         "test:e2e:obsidian:runner": "vitest run --config vitest.config.e2e-runner.ts",
